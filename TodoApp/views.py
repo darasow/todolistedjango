@@ -76,6 +76,8 @@ def creation(request):
     return render(request, 'pages/creationCompte.html')
 
 def index(request):
+    if not request.session.get('user_id'):
+        return redirect("connexion")
     if request.method == 'POST':
         form = TodoForm(request.POST, request.FILES)
         if form.is_valid():
