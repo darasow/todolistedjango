@@ -77,8 +77,8 @@
 <div class="flex justify-center mt-8">
     <div class="flex">
         {% if page_obj.has_previous %}
-        <a href="?page=1" class="px-3 py-2 border border-gray-300 text-gray-500 rounded-l-md hover:bg-gray-100">First</a>
-        <a href="?page={{ page_obj.previous_page_number }}" class="px-3 py-2 border border-gray-300 text-gray-500 hover:bg-gray-100">Previous</a>
+        <a href="?page=1" class="px-3 py-2 border border-gray-300 text-gray-500 rounded-l-md hover:bg-gray-100">Précedent</a>
+        <a href="?page={{ page_obj.previous_page_number }}" class="px-3 py-2 border border-gray-300 text-gray-500 hover:bg-gray-100">Suivant</a>
         {% endif %}
         {% for num in page_obj.paginator.page_range %}
             {% if page_obj.number == num %}
